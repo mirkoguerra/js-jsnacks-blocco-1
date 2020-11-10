@@ -29,12 +29,12 @@ $(document).ready(function(){
   var bicicletteLeggere = [biciclette[0]];
 
   // ciclo sull'array che contiene tutte le biciclette
-  for (var i=1; i<biciclette.length; i++) {
+  for (var i = 1; i < biciclette.length; i++) {
 
-    if (biciclette[i]["peso"] == bicicletteLeggere[0]["peso"]) {
+    if (biciclette[i].peso == bicicletteLeggere[0].peso) {
       bicicletteLeggere.push(biciclette[i]);
       // se il peso della bicicletta è uguale al peso del primo elemento delle biciclette leggere, aggiungo il peso della bicicletta all'array delle biciclette leggere
-    } else if (biciclette[i]["peso"] < bicicletteLeggere[0]["peso"]) {
+    } else if (biciclette[i].peso < bicicletteLeggere[0].peso) {
       bicicletteLeggere = [biciclette[i]];
       // se il peso della bicicletta è minore al peso del primo elemento delle biciclette leggere, svuoto l'array e ci metto la bicicletta più leggera
     }
@@ -44,9 +44,9 @@ $(document).ready(function(){
   console.log("array della/e bicicletta/e con il peso minore", bicicletteLeggere);
 
   // stampo a schermo l'array contenente la/e bicicletta/e con il peso minore
-  for (var i=0; i<bicicletteLeggere.length; i++) {
-    $(".biciclette-leggere").append("<p>" + bicicletteLeggere[i]["nome"] + "</p>");
+  for (var i = 0; i < bicicletteLeggere.length; i++) {
+    $(".biciclette-leggere").append("<p>" + bicicletteLeggere[i].nome + "</p>");
   }
   // stampo a schermo il peso minore
-  $(".peso-minore").append("Il peso delle bici con il peso minore è: " + bicicletteLeggere[0]["peso"]);
+  $(".peso-minore").append("Il peso delle bici con il peso minore è: " + bicicletteLeggere[0].peso);
 });

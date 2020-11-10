@@ -4,3 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* GENERAL */
+p {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
